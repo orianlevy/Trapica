@@ -1,0 +1,37 @@
+{
+  "plugins": [
+    "transform-class-properties",
+    "react-html-attrs", 
+    "transform-decorators-legacy", 
+    "transform-object-rest-spread",
+    "transform-object-assign",
+    "transform-react-jsx",
+    [
+      "transform-runtime",
+      {
+        "polyfill": false
+      }
+    ],
+    [
+      "react-css-modules",
+      {
+        "webpackHotModuleReloading": true,
+        "handleMissingStyleName": "ignore",
+        "context": "./src/js/",
+        "generateScopedName": "[name]__[local]___[hash:base64:5]"
+      }
+    ]
+  ],
+  "presets": [
+    ["env", { "modules": false }],
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "development": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  }
+}
